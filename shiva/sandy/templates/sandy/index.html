@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>homepage</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-image:url('{% static "html/bgimage.jpg" %}');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 600px;
+        }
+        nav{
+            background-color: rgb(50,65,73,0.877);
+        }
+        nav:after{
+            content: '';
+            clear: both;
+            display: table;
+        }
+        nav .logo{
+            float: left;
+            color: silver;
+            font-size: 27px;
+            font-weight: 600;
+            line-height: 70px;
+            padding-left: 60px;
+        }
+        nav ul{
+            float: right;
+            list-style: none;
+            margin-right: 40px;
+            position: relative;
+        }
+        nav ul li{
+            text-align: left;
+            display: inline-block;
+            margin:0 5px;
+        }
+        nav ul li a{
+            color: red;
+            text-decoration: none;
+            line-height: 70px;
+            font-size: 18px;
+            padding: 8px 15px;
+        }
+        nav ul ul{
+            position: absolute;
+            top: 69px;
+            opacity: 0;
+            visibility: hidden;
+            height: 18rem;
+            background-color: rgb(50,65,73,0.877);
+        }
+        nav ul li:hover > ul{
+            opacity: 1;
+            visibility: visible;
+    
+
+        }
+        nav ul ul li{
+            position: relative;
+            margin: 0px;
+            width: 150px;
+            float: none;
+            display: list-item;
+            border-bottom: 1px solid rgb(50,65,73,0.877); 
+        }
+        nav ul ul ul li{
+            position: relative;
+            top: -70px;
+            left: 150px;
+            background:rgb(50,65,73,0.877); 
+
+        }
+        .none{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">SHIVA STORES</div>
+        <ul>
+            <li>
+                <a href="#"><i class="bi bi-briefcase-fill"></i>&nbsp;PRODUCTS</a>
+                <ul>
+                    <li><a href="#">GROCERIES</a></li>
+                    <li><a href="#">STATIONARIES</a></li>
+                    <li><a href="#">CHOCOLATES</a></li>
+                    <li><a href="#">ICE CREAM</a></li>
+                </ul>
+            </li>
+            <li><a href="login/"><i class="bi bi-box-arrow-in-right"></i>&nbsp;LOG IN</a></li>
+            <li><a href="contact/"><i class="bi bi-person-lines-fill"></i>&nbsp;CONTACT</a></li>
+            <li><a href="about/"><i class="bi bi-file-earmark-person-fill"></i>&nbsp;ABOUT</a></li>
+        </ul>
+    </nav>
+    
+</body>
+</html>
